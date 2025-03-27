@@ -1,0 +1,97 @@
+package sample;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Supplier;
+
+import org.eclipse.jdt.core.dom.ASTVisitor;
+import org.eclipse.jdt.core.dom.CompilationUnit;
+import org.eclipse.jdt.core.dom.MethodDeclaration;
+
+import kr.ac.seoultech.selab.logicfl.utils.CodeUtils;
+
+public class Sample3 {
+
+    private String str;
+    private Integer num;
+    private Object obj;
+
+    public Sample3(String s, Integer n, Object o) {
+        int PROBE_START_LINE_20 = 20;
+		String p_s_1_line_20 = s;
+		int PROBE_END_LINE_20 = 20;
+		this.str = p_s_1_line_20;
+        int PROBE_START_LINE_21 = 21;
+		Integer p_n_2_line_21 = n;
+		int PROBE_END_LINE_21 = 21;
+		this.num = p_n_2_line_21;
+        int PROBE_START_LINE_22 = 22;
+		Object p_o_3_line_22 = o;
+		int PROBE_END_LINE_22 = 22;
+		this.obj = p_o_3_line_22;
+    }
+
+    public Supplier<String> lambdaSample() {
+        int PROBE_START_LINE_26 = 26;
+		Supplier<String> sample3_expr7_line_26 = () -> {
+			Integer f_num_5_line_26 = this.num;
+			String sample3_expr8_line_26 = f_num_5_line_26.toString();
+			return sample3_expr8_line_26;
+		};
+		int PROBE_END_LINE_26 = 26;
+		return sample3_expr7_line_26;
+    }
+
+    @Override
+    public String toString() {
+        int PROBE_START_LINE_31 = 31;
+		Supplier<String> sample3_expr11_line_31 = this.lambdaSample();
+		String sample3_expr10_line_31 = sample3_expr11_line_31.get();
+		int PROBE_END_LINE_31 = 31;
+		String s = sample3_expr10_line_31;
+        int PROBE_START_LINE_32 = 32;
+		String f_str_4_line_32 = str;
+		Integer f_num_5_line_32 = num;
+		String sample3_expr14_line_32 = f_num_5_line_32.toString();
+		Object f_obj_6_line_32 = obj;
+		String sample3_expr15_line_32 = f_obj_6_line_32.toString();
+		String v_s_7_line_32 = s;
+		String sample3_expr13_line_32 = String.join("/", f_str_4_line_32, sample3_expr14_line_32,
+				sample3_expr15_line_32, v_s_7_line_32);
+		int PROBE_END_LINE_32 = 32;
+		return sample3_expr13_line_32;
+    }
+
+    public List<String> getMethods(String source) {
+        List<String> methods = new ArrayList<>();
+        int PROBE_START_LINE_37 = 37;
+		String p_source_8_line_37 = source;
+		Object sample3_expr17_line_37 = CodeUtils.getCompilationUnit(p_source_8_line_37);
+		int PROBE_END_LINE_37 = 37;
+		CompilationUnit cu = sample3_expr17_line_37;
+        int PROBE_START_LINE_38 = 45;
+		Object sample3_expr19_line_38 = getVisitor(new ASTVisitor() {
+			@Override
+			public boolean visit(MethodDeclaration node) {
+				Object sample3_expr22_line_41 = node.getName();
+				Object sample3_expr21_line_41 = sample3_expr22_line_41.toString();
+				String methodName = sample3_expr21_line_41;
+				List<String> v_methods_9_line_42 = methods;
+				String v_method_name_10_line_42 = methodName;
+				v_methods_9_line_42.add(v_method_name_10_line_42);
+				Object sample3_expr24_line_43 = super.visit(node);
+				return sample3_expr24_line_43;
+			}
+		});
+		int PROBE_END_LINE_38 = 45;
+		cu.accept(sample3_expr19_line_38);
+        int PROBE_START_LINE_46 = 46;
+		List<String> v_methods_9_line_46 = methods;
+		int PROBE_END_LINE_46 = 46;
+		return v_methods_9_line_46;
+    }
+
+    public ASTVisitor getVisitor(ASTVisitor visitor) {
+        return visitor;
+    }
+}

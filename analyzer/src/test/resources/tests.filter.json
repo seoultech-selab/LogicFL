@@ -1,0 +1,16 @@
+{
+    "passed.classes": [
+
+    ],
+    "failed.classes": [
+        "sample.ExampleTest"
+    ],
+    "filtered.classes": [
+        "sample.Person"
+    ],
+    "failed.tests": [{
+        "class": "sample.ExampleTest",
+        "name": "test1",
+        "message": ""
+    }]
+}

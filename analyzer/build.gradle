@@ -1,0 +1,63 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+}
+
+group 'logicfl'
+version '0.7.0'
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'org.eclipse.jdt:org.eclipse.jdt.core:3.36.0'
+    implementation 'org.json:json:20230618'
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation 'org.junit.platform:junit-platform-launcher:1.10.0'
+    implementation 'junit:junit:4.13'
+    implementation 'org.apache.commons:commons-exec:1.3'
+    implementation 'org.jacoco:org.jacoco.core:0.8.11'
+    implementation 'com.github.SWI-Prolog:packages-jpl:V9.3.2'
+
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testRuntimeOnly 'junit:junit:4.13'
+    testRuntimeOnly files('src/test/resources/test-sample.jar')
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jacocoTestReport {
+    reports {
+        csv.required = true
+        html.outputLocation = layout.buildDirectory.dir('jacoco')
+    }
+}
+
+task testJar(type: Jar) {
+    archiveClassifier = 'tests'
+    archiveFileName = 'test-sample.jar'
+    destinationDirectory = file('src/test/resources')
+
+    from sourceSets.test.output
+    dependsOn testClasses // Make sure test classes are compiled before creating the JAR
+}
+
+task fatJar(type: Jar) {
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    {
+        exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+    }
+    with jar
+    archiveFileName = "${project.name}-${project.version}-all-in-one.jar"
+}

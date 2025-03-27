@@ -1,0 +1,13 @@
+{
+    "passed.classes": [
+
+    ],
+    "failed.classes": [
+        "sample.SampleTest"
+    ],
+    "failed.tests": [{
+        "class": "sample.SampleTest",
+        "name": "test1",
+        "message": ""
+    }]
+}

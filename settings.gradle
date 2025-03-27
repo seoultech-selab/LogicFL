@@ -1,0 +1,2 @@
+rootProject.name = 'logic-fl'
+include 'analyzer'

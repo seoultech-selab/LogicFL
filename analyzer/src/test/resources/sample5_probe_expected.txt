@@ -1,0 +1,124 @@
+package sample;
+
+public class Sample5 {
+    public String field1;
+    public int field2;
+
+    public Sample5(String field1, int field2) {
+        int PROBE_START_LINE_8 = 8;
+		String p_field_1_1_line_8 = field1;
+		int PROBE_END_LINE_8 = 8;
+		this.field1 = p_field_1_1_line_8;
+        int PROBE_START_LINE_9 = 9;
+		int p_field_2_2_line_9 = field2;
+		int PROBE_END_LINE_9 = 9;
+		this.field2 = p_field_2_2_line_9;
+    }
+
+    public boolean test() {
+        method1();
+        method1();
+        method1();
+        method2();
+        method3();
+
+
+        int PROBE_START_LINE_20 = 20;
+		String f_field_1_3_line_20 = field1;
+		boolean sample5_expr10_line_20 = f_field_1_3_line_20.contains("");
+		int PROBE_END_LINE_20 = 20;
+		return sample5_expr10_line_20;
+    }
+
+    private void method1() {
+        int count = 0;
+        int PROBE_START_LINE_25 = 31;
+		int f_field_2_4_line_25 = field2;
+		boolean sample5_expr11_line_25 = f_field_2_4_line_25 > 0;
+		int PROBE_END_LINE_25 = 31;
+		if(sample5_expr11_line_25) {
+            count = 0;
+        } else {
+			int PROBE_START_LINE_27 = 31;
+			int f_field_2_4_line_27 = field2;
+			boolean sample5_expr13_line_27 = f_field_2_4_line_27 == 0;
+			int PROBE_END_LINE_27 = 31;
+			if (sample5_expr13_line_27) {
+				int PROBE_START_LINE_28 = 28;
+				int f_field_2_4_line_28 = field2;
+				int sample5_expr15_line_28 = f_field_2_4_line_28 - 1;
+				int PROBE_END_LINE_28 = 28;
+				count = sample5_expr15_line_28;
+			} else {
+				int PROBE_START_LINE_30 = 30;
+				int f_field_2_4_line_30 = field2;
+				int sample5_expr17_line_30 = f_field_2_4_line_30 + 2;
+				int PROBE_END_LINE_30 = 30;
+				count = sample5_expr17_line_30;
+			}
+		}
+        int PROBE_START_LINE_32 = 32;
+		int v_count_5_line_32 = count;
+		int PROBE_END_LINE_32 = 32;
+		field2 = v_count_5_line_32;
+    }
+
+    private int method2() {
+        int PROBE_START_LINE_36 = 36;
+		String f_field_1_3_line_36 = field1;
+		String f_field_1_3_line_36_v1 = field1;
+		int f_field_2_4_line_36 = field2;
+		String sample5_expr19_line_36 = f_field_1_3_line_36 + f_field_1_3_line_36_v1 + f_field_2_4_line_36;
+		int PROBE_END_LINE_36 = 36;
+		String s = sample5_expr19_line_36;
+
+        int PROBE_START_LINE_38 = 38;
+		String v_s_6_line_38 = s;
+		int sample5_expr20_line_38 = v_s_6_line_38.length();
+		int PROBE_END_LINE_38 = 38;
+		return sample5_expr20_line_38;
+    }
+
+    private void method3() {
+        int count = 0;
+        field2 = 5;
+        int PROBE_START_LINE_44 = 50;
+		int f_field_2_4_line_44 = field2;
+		boolean sample5_expr22_line_44 = f_field_2_4_line_44 < 0;
+		int PROBE_END_LINE_44 = 50;
+		if(sample5_expr22_line_44) {
+            count = 1;
+        } else {
+			int PROBE_START_LINE_46 = 50;
+			int v_count_7_line_46 = count;
+			int f_field_2_4_line_46 = field2;
+			boolean sample5_expr23_line_46 = v_count_7_line_46 < f_field_2_4_line_46;
+			if (sample5_expr23_line_46) {
+				boolean FOR_STMT_TOGGLE_LINE_47 = false;
+				int PROBE_END_LINE_46 = 46;
+				for (int i = 0; true;) {
+					int PROBE_START_LINE_48 = 48;
+					if (!FOR_STMT_TOGGLE_LINE_47) {
+						FOR_STMT_TOGGLE_LINE_47 = true;
+						int v_count_7_line_47 = count;
+						i = v_count_7_line_47;
+					} else {
+						if (FOR_STMT_TOGGLE_LINE_47) {
+							i++;
+						} else {
+							FOR_STMT_TOGGLE_LINE_47 = true;
+						}
+					}
+					int v_i_8_line_47 = i;
+					int f_field_2_4_line_47 = field2;
+					boolean sample5_expr24_line_47 = v_i_8_line_47 < f_field_2_4_line_47;
+					if (!(sample5_expr24_line_47)) {
+						break;
+					}
+					int PROBE_END_LINE_48 = 48;
+					count += 2;
+				}
+			}
+		}
+    }
+}

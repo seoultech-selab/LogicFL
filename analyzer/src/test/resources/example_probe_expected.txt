@@ -1,0 +1,87 @@
+package sample;
+
+public class Example {
+    private Person<?> p;
+    private Object s;
+
+    public Example(Person<?> p) {
+        this(p, p.field);
+    }
+
+    public Example(Person<?> p, Object s) {
+        this.p = p;
+        s = p.field;
+    }
+
+    public String decorate() {
+        int PROBE_START_LINE_17 = 17;
+		Person<?> f_p_5_line_17 = this.p;
+		String example_expr3_line_17 = f_p_5_line_17.getName();
+		String example_expr2_line_17 = (example_expr3_line_17);
+		String example_expr1_line_17 = firstName(example_expr2_line_17);
+		int PROBE_END_LINE_17 = 17;
+		String firstName = example_expr1_line_17;
+        String lastName = lastName(p.getName());
+
+        return lastName.toUpperCase() + "," + firstName;
+    }
+
+    public String firstName(String name) {
+        int index = name.indexOf(' ');
+        return name.substring(0, index > 0 ? index : 0);
+    }
+
+    public String lastName(String name) throws NullPointerException {
+        if(name == null)
+            throw new NullPointerException();
+        int index = name.indexOf(' ');
+        int PROBE_START_LINE_32 = 35;
+		String p_name_7_line_32 = name;
+		boolean example_expr7_line_32 = p_name_7_line_32 != null;
+		boolean example_expr8_line_32 = true;
+		if (example_expr7_line_32) {
+			int v_index_8_line_32 = index;
+			example_expr8_line_32 = v_index_8_line_32 >= 0;
+		}
+		boolean example_expr6_line_32 = example_expr7_line_32 && example_expr8_line_32;
+		boolean example_expr9_line_32 = true;
+		if (example_expr6_line_32) {
+			int v_index_8_line_32_v1 = index;
+			int example_expr12_line_32 = v_index_8_line_32_v1 + 1;
+			String p_name_7_line_32_v1 = name;
+			int example_expr13_line_32 = p_name_7_line_32_v1.length();
+			boolean example_expr11_line_32 = example_expr12_line_32 < example_expr13_line_32;
+			boolean example_expr10_line_32 = (example_expr11_line_32);
+			example_expr9_line_32 = !example_expr10_line_32;
+		}
+		boolean example_expr5_line_32 = example_expr6_line_32 && example_expr9_line_32;
+		int PROBE_END_LINE_32 = 35;
+		if(example_expr5_line_32) {
+			int PROBE_START_LINE_33 = 33;
+			String p_name_7_line_33 = name;
+			int v_index_8_line_33 = index;
+			int example_expr15_line_33 = v_index_8_line_33 + 1;
+			String example_expr14_line_33 = p_name_7_line_33.substring(example_expr15_line_33);
+			int PROBE_END_LINE_33 = 33;
+			return example_expr14_line_33;
+		} else
+            index = index + 1;
+        int PROBE_START_LINE_36 = 38;
+		int v_index_8_line_36 = index;
+		boolean example_expr18_line_36 = v_index_8_line_36 > 0;
+		String example_expr19_line_37 = null;
+		String example_expr20_line_38 = null;
+		if (example_expr18_line_36) {
+			String p_name_7_line_37 = name;
+			int v_index_8_line_37 = index;
+			example_expr19_line_37 = p_name_7_line_37.substring(0, v_index_8_line_37);
+		} else {
+			String p_name_7_line_38 = name;
+			example_expr20_line_38 = firstName(p_name_7_line_38);
+		}
+		String example_expr17_line_36 = example_expr18_line_36 ? example_expr19_line_37 : example_expr20_line_38;
+		int PROBE_END_LINE_36 = 38;
+		name = example_expr17_line_36;
+        return null;
+    }
+}

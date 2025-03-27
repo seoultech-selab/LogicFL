@@ -1,0 +1,240 @@
+package sample;
+
+import java.util.List;
+
+public class Sample4 {
+
+    public String field1;
+    public int field2;
+
+    public Sample4(String field1, int field2) {
+        int PROBE_START_LINE_11 = 11;
+		String p_field_1_1_line_11 = field1;
+		int PROBE_END_LINE_11 = 11;
+		this.field1 = p_field_1_1_line_11;
+        int PROBE_START_LINE_12 = 12;
+		int p_field_2_2_line_12 = field2;
+		int PROBE_END_LINE_12 = 12;
+		this.field2 = p_field_2_2_line_12;
+    }
+
+    public String generate() {
+        StringBuffer sb2 = new StringBuffer();
+        for(int i=0; true; i++) {
+			int PROBE_START_LINE_18 = 18;
+			int v_i_6_line_17 = i;
+			int f_field_2_4_line_17 = field2;
+			boolean sample4_expr6_line_17 = v_i_6_line_17 < f_field_2_4_line_17;
+			if (!(sample4_expr6_line_17)) {
+				break;
+			}
+			StringBuffer v_sb_2_5_line_18 = sb2;
+			String f_field_1_3_line_18 = field1;
+			int PROBE_END_LINE_18 = 18;
+			v_sb_2_5_line_18.append(f_field_1_3_line_18);
+		}
+
+        StringBuffer sb = new StringBuffer();
+        int PROBE_START_LINE_21 = 21;
+		StringBuffer v_sb_7_line_21 = sb;
+		int PROBE_END_LINE_21 = 21;
+		method1(v_sb_7_line_21);
+        sb = new StringBuffer();
+        int PROBE_START_LINE_23 = 23;
+		StringBuffer v_sb_7_line_23 = sb;
+		int PROBE_END_LINE_23 = 23;
+		method2(v_sb_7_line_23);
+        method3();
+        method4();
+        method5();
+
+        int PROBE_START_LINE_28 = 31;
+		String f_field_1_3_line_28 = field1;
+		int sample4_expr18_line_28 = f_field_1_3_line_28.length();
+		boolean sample4_expr17_line_28 = sample4_expr18_line_28 > 0;
+		int PROBE_END_LINE_28 = 31;
+		if(sample4_expr17_line_28) {
+			int PROBE_START_LINE_29 = 29;
+			StringBuffer v_sb_2_5_line_29 = sb2;
+			String sample4_expr19_line_29 = v_sb_2_5_line_29.toString();
+			int PROBE_END_LINE_29 = 29;
+			return sample4_expr19_line_29;
+		} else
+            return null;
+    }
+
+    private void method1(StringBuffer sb) {
+        int count = 0;
+        int PROBE_START_LINE_35 = 35;
+		boolean DO_COND_TOGGLE_LINE_36 = false;
+		int PROBE_END_LINE_35 = 35;
+		do {
+            int PROBE_START_LINE_36 = 42;
+			if (DO_COND_TOGGLE_LINE_36) {
+				int f_field_2_4_line_42 = field2;
+				int sample4_expr27_line_42 = f_field_2_4_line_42 * 2;
+				boolean sample4_expr25_line_42 = count++ < sample4_expr27_line_42;
+				boolean sample4_expr24_line_42 = (sample4_expr25_line_42);
+				if (!((Boolean) sample4_expr24_line_42)) {
+					break;
+				}
+			} else {
+				DO_COND_TOGGLE_LINE_36 = true;
+			}
+			int PROBE_END_LINE_36 = 42;
+			int PROBE_START_LINE_37 = 37;
+			StringBuffer p_sb_8_line_37 = sb;
+			String f_field_1_3_line_37 = field1;
+			int PROBE_END_LINE_37 = 37;
+			p_sb_8_line_37.append(f_field_1_3_line_37);
+            int PROBE_START_LINE_38 = 40;
+			String f_field_1_3_line_38 = field1;
+			boolean sample4_expr21_line_38 = f_field_1_3_line_38 == null;
+			int PROBE_END_LINE_38 = 40;
+			if(sample4_expr21_line_38) {
+                continue;
+            }
+            count++;
+        } while(true);
+    }
+
+    private void method2(StringBuffer sb) {
+        int i = 0, b = 0;
+        int PROBE_START_LINE_46 = 46;
+		boolean FOR_STMT_TOGGLE_LINE_47 = false;
+		int f_field_2_4_line_47 = field2;
+		int f_field_2_4_line_47_v1 = field2;
+		int sample4_expr29_line_47 = f_field_2_4_line_47 - f_field_2_4_line_47_v1;
+		i = sample4_expr29_line_47;
+		int v_i_11_line_47 = i;
+		int sample4_expr31_line_47 = v_i_11_line_47 + 1;
+		b = sample4_expr31_line_47;
+		int PROBE_END_LINE_46 = 46;
+		for(; true ;) {
+            int PROBE_START_LINE_48 = 48;
+			if (!FOR_STMT_TOGGLE_LINE_47) {
+				FOR_STMT_TOGGLE_LINE_47 = true;
+			} else {
+				if (FOR_STMT_TOGGLE_LINE_47) {
+					i++;
+					int v_b_12_line_47_v1 = b;
+					int sample4_expr38_line_47 = v_b_12_line_47_v1 + 2;
+					b = sample4_expr38_line_47;
+				} else {
+					FOR_STMT_TOGGLE_LINE_47 = true;
+				}
+			}
+			int v_i_11_line_47_v1 = i;
+			int f_field_2_4_line_47_v2 = field2;
+			boolean sample4_expr33_line_47 = v_i_11_line_47_v1 < f_field_2_4_line_47_v2;
+			boolean sample4_expr34_line_47 = true;
+			if (sample4_expr33_line_47) {
+				int v_b_12_line_47 = b;
+				int f_field_2_4_line_47_v3 = field2;
+				int sample4_expr35_line_47 = f_field_2_4_line_47_v3 * 2;
+				sample4_expr34_line_47 = v_b_12_line_47 <= sample4_expr35_line_47;
+			}
+			boolean sample4_expr32_line_47 = sample4_expr33_line_47 && sample4_expr34_line_47;
+			if (!(sample4_expr32_line_47)) {
+				break;
+			}
+			StringBuffer p_sb_10_line_48 = sb;
+			String f_field_1_3_line_48 = field1;
+			int PROBE_END_LINE_48 = 48;
+			p_sb_10_line_48.append(f_field_1_3_line_48);
+        }
+        field2 += 1;
+    }
+
+    private void method3() {
+        int PROBE_START_LINE_54 = 54;
+		List<Integer> sample4_expr41_line_54 = List.of(1, 2, 3, 4, 5);
+		int PROBE_END_LINE_54 = 54;
+		List<Integer> list = sample4_expr41_line_54;
+        int PROBE_START_LINE_55 = 57;
+		List<Integer> v_list_13_line_55 = list;
+		List<Integer> sample4_expr42_line_55 = v_list_13_line_55.subList(0, 2);
+		int PROBE_END_LINE_55 = 57;
+		for(int x : sample4_expr42_line_55) {
+            int PROBE_START_LINE_56 = 56;
+			int v_x_14_line_56 = x;
+			int PROBE_END_LINE_56 = 56;
+			field2 += v_x_14_line_56;
+        }
+    }
+
+    private void method4() {
+        int count = 0;
+        int i = 5;
+        while(true) {
+			int PROBE_START_LINE_63 = 63;
+			int v_i_16_line_63 = i;
+			int sample4_expr46_line_63 = v_i_16_line_63 + 1;
+			boolean sample4_expr44_line_63 = count++ < sample4_expr46_line_63;
+			if (!(sample4_expr44_line_63)) {
+				break;
+			}}
+        boolean DO_COND_TOGGLE_LINE_64 = false;
+		int PROBE_END_LINE_63 = 63;
+		do {
+			int PROBE_START_LINE_64 = 64;
+			if (DO_COND_TOGGLE_LINE_64) {
+				boolean sample4_expr47_line_64 = count-- > 0;
+				if (!(sample4_expr47_line_64)) {
+					break;
+				}
+			} else {
+				DO_COND_TOGGLE_LINE_64 = true;
+			}} while(true);
+        boolean FOR_STMT_TOGGLE_LINE_65 = false;
+		int PROBE_END_LINE_64 = 64;
+		for(int j=0, k=0;
+            true;) {
+				int PROBE_START_LINE_67 = 67;
+				if (!FOR_STMT_TOGGLE_LINE_65) {
+					FOR_STMT_TOGGLE_LINE_65 = true;
+					j = 0;
+					int v_j_17_line_65 = j;
+					int sample4_expr49_line_65 = v_j_17_line_65 + 1;
+					k = sample4_expr49_line_65;
+				} else {
+					if (FOR_STMT_TOGGLE_LINE_65) {
+						j++;
+					} else {
+						FOR_STMT_TOGGLE_LINE_65 = true;
+					}
+				}
+				int v_j_17_line_66 = j;
+				int v_k_18_line_66 = k;
+				boolean sample4_expr50_line_66 = v_j_17_line_66 < v_k_18_line_66;
+				if (!(sample4_expr50_line_66)) {
+					break;
+				}
+				int PROBE_END_LINE_67 = 67;}
+    }
+
+    private void method5() {
+        Sample4 s1 = new Sample4("1", 1);
+        Sample4 s2 = new Sample4("2", 2);
+        Sample4 s3 = new Sample4("3", 3);
+        int PROBE_START_LINE_74 = 74;
+		String f_field_1_3_line_74 = this.field1;
+		int PROBE_END_LINE_74 = 74;
+		s1.field1 = f_field_1_3_line_74;
+        int PROBE_START_LINE_75 = 75;
+		sample.Sample4 v_s_3_21_line_75 = s3;
+		int q_field_2_3_line_75 = v_s_3_21_line_75.field2;
+		int PROBE_END_LINE_75 = 75;
+		s2.field2 = q_field_2_3_line_75;
+        int PROBE_START_LINE_76 = 76;
+		sample.Sample4 v_s_1_19_line_76 = s1;
+		int q_field_2_4_line_76 = v_s_1_19_line_76.field2;
+		int PROBE_END_LINE_76 = 76;
+		this.field2 = q_field_2_4_line_76;
+        int PROBE_START_LINE_77 = 77;
+		sample.Sample4 v_s_1_19_line_77 = s1;
+		int q_field_2_5_line_77 = v_s_1_19_line_77.field2;
+		int PROBE_END_LINE_77 = 77;
+		s2.field2 = q_field_2_5_line_77;
+    }
+}

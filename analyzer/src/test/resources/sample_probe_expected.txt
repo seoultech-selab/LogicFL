@@ -1,0 +1,161 @@
+package sample;
+
+import java.io.BufferedReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.io.PrintStream;
+import java.util.function.Consumer;
+
+public class Sample {
+
+    private int num;
+    private String str;
+
+    public Sample() {
+        this.num = 0;
+        str = null;
+    }
+
+    public int getNum() {
+        int PROBE_START_LINE_21 = 21;
+		int f_num_1_line_21 = num;
+		int PROBE_END_LINE_21 = 21;
+		return f_num_1_line_21;
+    }
+
+    public String getStr() {
+        int PROBE_START_LINE_25 = 25;
+		String f_str_2_line_25 = str;
+		int PROBE_END_LINE_25 = 25;
+		return f_str_2_line_25;
+    }
+
+    public boolean run() {
+        try (BufferedReader br = Files.newBufferedReader(Paths.get("src/test/resources/config.sample.properties"))) {
+            int PROBE_START_LINE_30 = 30;
+			java.io.BufferedReader v_br_3_line_30 = br;
+			String sample_expr6_line_30 = v_br_3_line_30.readLine();
+			int PROBE_END_LINE_30 = 30;
+			String line = sample_expr6_line_30;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        List<Sample> list = new ArrayList<>();
+        for(int i=0; true; i++) {
+			int PROBE_START_LINE_36 = 36;
+			int v_i_6_line_35 = i;
+			boolean sample_expr8_line_35 = v_i_6_line_35 < 5;
+			if (!(sample_expr8_line_35)) {
+				break;
+			}
+			List<sample.Sample> v_list_5_line_36 = list;
+			int PROBE_END_LINE_36 = 36;
+			v_list_5_line_36.add(new Sample());
+		}
+        int PROBE_START_LINE_37 = 37;
+		List<sample.Sample> v_list_5_line_37 = list;
+		for(Sample s : v_list_5_line_37) { java.io.PrintStream q_out_1_line_37 = System.out;
+			sample.Sample v_s_7_line_37 = s;
+			String sample_expr13_line_37 = v_s_7_line_37.toString();
+			int PROBE_END_LINE_37 = 37;
+		q_out_1_line_37.println(sample_expr13_line_37); };
+        int PROBE_START_LINE_38 = 38;
+		List<sample.Sample> v_list_5_line_38 = list;
+		Iterator<Sample> sample_expr14_line_38 = v_list_5_line_38.iterator();
+		int PROBE_END_LINE_38 = 38;
+		Iterator<Sample> it = sample_expr14_line_38;
+        int num = 0;
+        while(true) {
+            int PROBE_START_LINE_40 = 41;
+				int v_num_10_line_40 = num;
+				boolean sample_expr16_line_40 = v_num_10_line_40 < 10;
+				boolean sample_expr17_line_41 = true;
+				if (sample_expr16_line_40) {
+					Iterator<sample.Sample> v_it_9_line_41 = it;
+					sample_expr17_line_41 = v_it_9_line_41.hasNext();
+				}
+				boolean sample_expr15_line_40 = sample_expr16_line_40 && sample_expr17_line_41;
+				if (!(sample_expr15_line_40)) {
+					break;
+				}
+				int PROBE_END_LINE_40 = 41;
+				int PROBE_START_LINE_42 = 42;
+				Iterator<sample.Sample> v_it_9_line_42 = it;
+				sample.Sample sample_expr20_line_42 = v_it_9_line_42.next();
+				int sample_expr19_line_42 = sample_expr20_line_42.getNum();
+				int PROBE_END_LINE_42 = 42;
+			num += sample_expr19_line_42;
+            int PROBE_START_LINE_43 = 46;
+			int v_num_10_line_43 = num;
+			boolean sample_expr21_line_43 = v_num_10_line_43 >= 10;
+			int PROBE_END_LINE_43 = 46;
+			if(sample_expr21_line_43) {
+                num = num - 10;
+                break;
+            }
+        }
+        int PROBE_START_LINE_48 = 53;
+		List<sample.Sample> v_list_5_line_48 = list;
+		Consumer<? super sample.Sample> sample_expr23_line_48 = (s) -> {
+			sample.Sample p_s_11_line_49 = s;
+			int q_num_2_line_49 = p_s_11_line_49.num;
+			boolean sample_expr24_line_49 = q_num_2_line_49 >= 0;
+			if (sample_expr24_line_49) {
+				sample.Sample p_s_11_line_50 = s;
+				String sample_expr25_line_50 = p_s_11_line_50.toString();
+				String str = sample_expr25_line_50;
+				String v_str_12_line_51 = str;
+				int sample_expr27_line_51 = v_str_12_line_51.length();
+				s.num = sample_expr27_line_51;
+			}
+		};
+		int PROBE_END_LINE_48 = 53;
+		v_list_5_line_48.forEach(sample_expr23_line_48);
+        int PROBE_START_LINE_54 = 57;
+		List<sample.Sample> v_list_5_line_54 = list;
+		int sample_expr29_line_54 = v_list_5_line_54.size();
+		boolean sample_expr28_line_54 = sample_expr29_line_54 < 0;
+		int PROBE_END_LINE_54 = 57;
+		if(sample_expr28_line_54)
+            num = list.size();
+		else {
+			int PROBE_START_LINE_57 = 57;
+			List<sample.Sample> v_list_5_line_57 = list;
+			List<sample.Sample> v_list_5_line_57_v1 = list;
+			sample.Sample sample_expr31_line_57 = v_list_5_line_57_v1.get(0);
+			int PROBE_END_LINE_57 = 57;
+			v_list_5_line_57.add(sample_expr31_line_57);
+		}
+        int PROBE_START_LINE_58 = 58;
+		String sample_expr35_line_58 = getStr();
+		boolean sample_expr33_line_58 = sample_expr35_line_58 == null;
+		String sample_expr34_line_58 = null;
+		if (!sample_expr33_line_58) {
+			sample_expr34_line_58 = getStr();
+		}
+		String sample_expr32_line_58 = sample_expr33_line_58 ? null : sample_expr34_line_58;
+		int PROBE_END_LINE_58 = 58;
+		String test = sample_expr32_line_58;
+        int PROBE_START_LINE_59 = 59;
+		String v_test_13_line_59 = test;
+		boolean sample_expr38_line_59 = v_test_13_line_59 == null;
+		String v_test_13_line_59_v1 = null;
+		if (sample_expr38_line_59) {
+			v_test_13_line_59_v1 = test;
+		}
+		String sample_expr37_line_59 = sample_expr38_line_59 ? v_test_13_line_59_v1 : "";
+		int PROBE_END_LINE_59 = 59;
+		test = sample_expr37_line_59;
+        int PROBE_START_LINE_60 = 61;
+		java.io.PrintStream q_out_3_line_60 = System.out;
+		String v_test_13_line_61 = test;
+		int sample_expr40_line_61 = v_test_13_line_61.length();
+		int PROBE_END_LINE_60 = 61;
+		q_out_3_line_60.println(
+                sample_expr40_line_61);
+        return true;
+    }
+}
