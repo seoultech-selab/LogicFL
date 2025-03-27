@@ -4,7 +4,7 @@ This repository provides the core LogicFL implementation on Java.
 
 ### Steps to Run
 
-* You need to create ``config.properties`` file for configuration first. Please refer to a sample in ``src/test/resources/config.propertes``.
+* You need to create ``config.properties`` file for configuration first. Please refer to a [sample](https://github.com/seoultech-selab/LogicFL/blob/main/analyzer/src/test/resources/config.properties).
 * To collect necessary information LogicFL should be executed in the following order.
   - ``CoverageAnalyzer``: it will obtain coverage information.
   - ``StaticAnalyzer``: it will collect facts from covered lines.
